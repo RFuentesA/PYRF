@@ -1,19 +1,19 @@
 import tkinter as tk
-
+#Ricardo Armando Fuentes Arevalo 7/09/2024 
 class Aplicacion:
     def __init__(self):
         self.ventana1=tk.Tk()
         menubar1 = tk.Menu(self.ventana1)
         self.ventana1.config(menu=menubar1)
         opciones1 = tk.Menu(menubar1)
-        opciones1.add_command(label="Rojo", command=self.fijarrojo)
-        opciones1.add_command(label="Verde", command=self.fijarverde)
-        opciones1.add_command(label="Azul", command=self.fijarazul)
+        opciones1.add_command(label="Rojo", command=self.fijarrojo, activebackground="blue", activeforeground="white")
+        opciones1.add_command(label="Verde", command=self.fijarverde, activebackground="blue", activeforeground="white")
+        opciones1.add_command(label="Azul", command=self.fijarazul, activebackground="blue", activeforeground="white")
         menubar1.add_cascade(label="Colores", menu=opciones1)        
         opciones2 = tk.Menu(menubar1)
-        opciones2.add_command(label="640x480", command=self.ventanachica)
-        opciones2.add_command(label="1024x800", command=self.ventanagrande)
-        menubar1.add_cascade(label="Tamaños", menu=opciones2)        
+        opciones2.add_command(label="640x480", command=self.ventanachica, activebackground="blue", activeforeground="white")
+        opciones2.add_command(label="1024x800", command=self.ventanagrande, activebackground="blue", activeforeground="white")
+        menubar1.add_cascade(label="Tamaños", menu=opciones2)
         self.ventana1.mainloop()
 
     def fijarrojo(self):
