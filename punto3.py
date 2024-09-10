@@ -1,5 +1,5 @@
 import tkinter as tk
-#Ricardo Armando Fuentes Arevalo 7/septiempre/2024
+#Ricardo Armando Fuentes Arevalo 10/septiempre/2024
 texto = []
 def cojerTexto():
     texto.append(cajita.get())
