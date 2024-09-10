@@ -10,7 +10,7 @@ def cojerTexto():
 
 ventana = tk.Tk()
 ventana.title("Agragar Nombres")
-ventana.geometry("350x300")
+ventana.geometry("300x300")
 
 label = tk.Label(ventana, text="Nombre:")
 label.grid(row=0, column=0, padx=10)
