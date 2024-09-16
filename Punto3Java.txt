@@ -1,0 +1,69 @@
+package application;
+	
+
+import javafx.application.Application;
+import javafx.stage.Stage;
+import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
+//Ricardo Armando Fuentes Arevalo 16/09/2024
+public class Main extends Application {
+	@Override
+	public void start(Stage primaryStage) {
+		
+		BorderPane root = new BorderPane();
+		Label lb1 = new Label("Eventos del raton");
+	    Font f = new Font("Helvetica",26);
+		lb1.setFont(f);
+		lb1.setTextFill(Color.BLACK);		
+		
+		root.setLeft(lb1);
+		
+		Scene Scene = new Scene(root, 300, 300);
+		primaryStage.setScene(Scene);
+		primaryStage.show();
+		
+		Label lb2 = new Label("Lo clickeo");
+		Font q = new Font("Helvetica",26);
+		lb2.setFont(q);
+		lb2.setTextFill(Color.RED);
+		
+		Label lb3 = new Label("Entre");
+		lb3.setFont(q);
+		lb3.setTextFill(Color.RED);
+		
+		Label lb4 = new Label("Sali");
+		lb4.setFont(q);
+		lb4.setTextFill(Color.RED);
+		
+		Label lb5 = new Label("Drageando");
+		lb5.setFont(q);
+		lb5.setTextFill(Color.RED);
+		
+		Label lb6 = new Label("Moviendo");
+		lb6.setFont(q);
+		lb6.setTextFill(Color.RED);
+		
+		Label lb7 = new Label("Presionando");
+		lb7.setFont(q);
+		lb7.setTextFill(Color.RED);
+		
+		Label lb8 = new Label("Solte");
+		lb8.setFont(q);
+		lb8.setTextFill(Color.RED);	
+		root.addEventHandler(MouseEvent.MOUSE_CLICKED, e -> root.setLeft(lb2));
+		root.addEventHandler(MouseEvent.MOUSE_ENTERED, e -> root.setLeft(lb3));
+		root.addEventHandler(MouseEvent.MOUSE_EXITED, e -> root.setLeft(lb4));
+		root.addEventHandler(MouseEvent.MOUSE_DRAGGED, e -> root.setLeft(lb5));
+		root.addEventHandler(MouseEvent.MOUSE_MOVED, e -> root.setLeft(lb6));
+		root.addEventHandler(MouseEvent.MOUSE_PRESSED, e -> root.setLeft(lb7));
+		root.addEventHandler(MouseEvent.MOUSE_RELEASED, e -> root.setLeft(lb8));
+	}
+	public static void main(String[] args) {
+		launch(args);
+	}
+		
+}
